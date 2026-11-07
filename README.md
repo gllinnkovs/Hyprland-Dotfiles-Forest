@@ -1,4 +1,4 @@
-# Hyprland Dotfiles — LordWerdes
+# Hyprland Dotfiles — By LordWerdes
 
 Тёмно-зелёное окружение для **Arch Linux**: Hyprland с Lua-конфигом, Waybar с живой полоской громкости, Wofi с прозрачностью и размытием, аккуратная GTK-шпаргалка по биндам.
 

@@ -1,2 +1,2 @@
 # Hyprland-Dotfiles-Forest
-Description in README.MD
+Description in README.md

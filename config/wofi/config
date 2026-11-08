@@ -1,0 +1,13 @@
+width=680
+height=460
+location=center
+show=drun
+prompt=Приложения
+allow_images=true
+image_size=28
+insensitive=true
+matching=fuzzy
+hide_scroll=true
+no_actions=true
+key_expand=Tab
+term=kitty

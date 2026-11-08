@@ -1,0 +1,140 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 13px;
+    min-height: 0;
+    border: none;
+}
+
+window#waybar {
+    background: rgba(10, 16, 12, 0.92);
+    border-bottom: 1px solid rgba(62, 124, 91, 0.35);
+    color: #c2d4c8;
+}
+
+/* единая геометрия пилюль: одна высота, одинаковые отступы */
+#custom-arch,
+#workspaces,
+#language,
+#clock,
+#custom-volume,
+#network,
+#tray {
+    min-height: 28px;
+    padding: 0 12px;
+    margin: 2px 3px;
+    border-radius: 9px;
+    background: rgba(30, 46, 38, 0.55);
+    border: 1px solid rgba(62, 124, 91, 0.14);
+}
+
+#custom-arch {
+    color: #7fc79e;
+    font-size: 17px;
+    padding: 0 12px 0 8px;
+}
+
+#custom-arch:hover {
+    background: rgba(62, 124, 91, 0.22);
+}
+
+/* ---------- рабочие столы ---------- */
+
+#workspaces {
+    padding: 0 5px;
+}
+
+#workspaces button {
+    min-width: 22px;
+    min-height: 22px;
+    padding: 0 3px;
+    margin: 3px 1px;
+    border-radius: 6px;
+    background: transparent;
+    color: #6f8579;
+    font-size: 13px;
+    transition: background-color 200ms ease, color 200ms ease,
+                padding 280ms cubic-bezier(0.22, 1, 0.36, 1),
+                margin 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#workspaces button.empty {
+    color: #53685c;
+}
+
+#workspaces button.visible {
+    color: #a9c9b6;
+    background: rgba(62, 124, 91, 0.18);
+}
+
+#workspaces button.active {
+    color: #07100b;
+    background: #74c79a;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+#workspaces button.active:hover {
+    background: #86d3a8;
+}
+
+#workspaces button.urgent {
+    color: #0b120e;
+    background: #d0916b;
+}
+
+/* ---------- раскладка ---------- */
+
+#language {
+    color: #7fc79e;
+    font-weight: bold;
+}
+
+/* ---------- часы ---------- */
+
+#clock {
+    color: #a9c9b6;
+}
+
+/* ---------- громкость ---------- */
+
+#custom-volume {
+    color: #8fb8a1;
+    padding: 0 10px;
+}
+
+#custom-volume.muted {
+    color: #d0916b;
+}
+
+/* ---------- сеть ---------- */
+
+#network {
+    color: #8fb8a1;
+    min-width: 118px;
+}
+
+#network.disconnected {
+    color: #d0916b;
+}
+
+/* ---------- трей ---------- */
+
+#tray {
+    padding: 0 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+/* ---------- подсказки ---------- */
+
+tooltip {
+    background: rgba(10, 16, 12, 0.96);
+    border: 1px solid rgba(62, 124, 91, 0.45);
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #c2d4c8;
+}

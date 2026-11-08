@@ -1,0 +1,77 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 0,
+
+    "modules-left": ["custom/arch", "hyprland/workspaces", "hyprland/language"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/volume", "network", "tray"],
+
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "$HOME/.config/hypr/wofi.sh"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "default": "·"
+        },
+        "on-click": "activate",
+        "all-outputs": true,
+        "persistent-workspaces": { "*": 5 }
+    },
+
+    "hyprland/language": {
+        "format-en": "EN",
+        "format-ru": "RU",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M   󰃭  %d.%m.%Y}",
+        "tooltip-format": "<tt><b>{calendar}</b></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right"
+        },
+        "locale": "ru_RU.UTF-8"
+    },
+
+    "custom/volume": {
+        "exec": "$HOME/.config/waybar/scripts/volume-print.sh",
+        "return-type": "json",
+        "interval": 5,
+        "signal": 8,
+        "tooltip": true,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
+    },
+
+    "network": {
+        "interval": 2,
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  Ethernet",
+        "format-linked": "󰈀  {ifname}",
+        "format-disconnected": "󰖪  нет сети",
+        "tooltip-format-wifi": "{essid}  ({signalStrength}%)\n{ipaddr}/{cidr}\n↓ {bandwidthDownBytes}   ↑ {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "Ethernet\n{ipaddr}/{cidr}\n↓ {bandwidthDownBytes}   ↑ {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Нет подключения",
+        "on-click": "kitty -e nmtui"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    }
+}
